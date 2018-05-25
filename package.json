@@ -1,0 +1,32 @@
+{
+    "name": "ionic-cordova-oauth",
+    "version": "0.0.1",
+    "description": "Extensible plugin to authenticate with various oAuth providers in hybrid / web apps",
+    "author": {
+        "name": "k1dbl4ck@gmail.com",
+        "url": "https://github.com/k1dbl4ck"
+    },
+    "homepage": "https://github.com/k1dbl4ck",
+    "devDependencies": {
+        "typescript": "^2.8.3"
+    },
+    "keywords": [
+        "angular 2",
+        "oauth",
+        "api",
+        "apache cordova",
+        "phonegap",
+        "ionic framework",
+        "ionic 2",
+        "typescript"
+    ],
+    "license": "MIT",
+    "scripts": {
+        "build.commonjs": "tsc",
+        "build.system": "tsc --outFile ng2-cordova-oauth.system.js --module system",
+        "build": "npm run build.commonjs"
+    },
+    "bugs": {
+        "url": "https://github.com/k1dbl4ck/atajo-oauth/issues"
+    }
+}
