@@ -1,12 +1,14 @@
 {
     "name": "ionic-cordova-oauth",
-    "version": "0.0.1",
+    "version": "0.0.5",
     "description": "Extensible plugin to authenticate with various oAuth providers in hybrid / web apps",
     "author": {
         "name": "k1dbl4ck@gmail.com",
         "url": "https://github.com/k1dbl4ck"
     },
     "homepage": "https://github.com/k1dbl4ck",
+    "main": "./dist/core.js",
+    "typings": "./dist/core.d.ts",
     "devDependencies": {
         "typescript": "^2.8.3"
     },

@@ -35,18 +35,16 @@ Each provider has it's own class.
 You need to inject the Platform class into every class in which you wish to use them. For example, if you wish to use Facebook oauth in a particular class, it would look something like:
 
 ```javascript
-import {Facebook, Google} from 'ionic-cordova-oauth/core';
-import {OauthBrowser} from 'ionic-cordova-oauth/platform/browser'
+import {Facebook, Google, OauthBrowser} from 'ionic-cordova-oauth';
 // or
-import {OauthCordova} from 'ionic-cordova-oauth/platform/cordova'
+import {Facebook, Google, OauthCordova} from 'ionic-cordova-oauth';
 ```
 
 Alternatively you can use Angular2 Injector in order to provide platform specific service for all components:
 ```js
 import {bootstrap} from '@angular/platform-browser-dynamic'
 import {App} from './app.component'
-import {OauthCordova} from 'ionic-cordova-oauth/platform/cordova'
-import {Oauth} from 'ionic-cordova-oauth/oauth'
+import {Oauth, OauthCordova} from 'ionic-cordova-oauth'
 
 bootstrap(App, [
   { provide: Oauth, useClass: OauthCordova }
@@ -115,8 +113,7 @@ More information can be found at:
 ```javascript
 import {Component} from '@angular/core';
 import {NavController, Platform} from 'ionic-angular';
-import {Facebook, Google, LinkedIn} from "ionic-cordova-oauth/core";
-import {OauthCordova} from 'ionic-cordova-oauth/platform/cordova';
+import {Facebook, Google, LinkedIn, OauthCordova} from "ionic-cordova-oauth";
 
 @Component({
     templateUrl: 'build/pages/home/home.html'
@@ -162,7 +159,15 @@ the list of all available options can be found:
 
 ## Version History
 
-0.0.1 - Initial 
+**0.0.1** 
+- Initial 
+
+**0.0.3** 
+- Adds main file link to dist for import entry point
+
+**0.0.4** 
+- Adds platforms to exports for one line import
+- Readme Update
 
 ## Contribution Rules
 
