@@ -2,7 +2,7 @@ import { Oauth } from '../oauth';
 import { utils } from '../utility';
 
 export class OauthBrowser extends Oauth {
-    static WATCH_POPUP_TIMEOUT = 100
+    static WATCH_POPUP_TIMEOUT = 1000
 
     defaultWindowOptions = {
       width: 600,
@@ -15,16 +15,23 @@ export class OauthBrowser extends Oauth {
         const title = windowParams.title;
         delete windowParams.title;
 
-        console.log("CALLING oAUTH WITH : ", url); 
 
         const popup = window.open(url, title, this.serializeOptions(windowParams))
         const watchDelay = (<any>this.constructor).WATCH_POPUP_TIMEOUT;
+
+        console.log("CALLING oAUTH ("+watchDelay+") WITH : ", url); 
+
         
+       
 
         return new Promise((resolve, reject) => {
           if (typeof popup.focus === 'function') {
             popup.focus();
           }
+
+          //SET HARD LIMIT TIMEOUT
+          setTimeout(() => { popup.close();}, 60000)
+          
 
           setTimeout(function watchPopup() {
 

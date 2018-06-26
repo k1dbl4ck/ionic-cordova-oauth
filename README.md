@@ -169,6 +169,10 @@ the list of all available options can be found:
 - Adds platforms to exports for one line import
 - Readme Update
 
+**0.0.5** 
+- Adds 60 second hard limit
+- Reduces check frequency to once a second.
+
 ## Contribution Rules
 
 Send me a PR from your fork. 
