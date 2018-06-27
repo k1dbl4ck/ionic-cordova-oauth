@@ -2,7 +2,7 @@ import { Oauth } from '../oauth';
 import { utils } from '../utility';
 
 export class OauthBrowser extends Oauth {
-    static WATCH_POPUP_TIMEOUT = 1000
+    static WATCH_POPUP_TIMEOUT = 100
 
     defaultWindowOptions = {
       width: 600,
@@ -29,13 +29,7 @@ export class OauthBrowser extends Oauth {
             popup.focus();
           }
 
-          //SET HARD LIMIT TIMEOUT
-          setTimeout(() => { popup.close();}, 60000)
-          
-
           setTimeout(function watchPopup() {
-
-
             try {
               if (popup.closed) {
                 return reject(new Error(`The "${options.providerName}" sign in flow was canceled`));
