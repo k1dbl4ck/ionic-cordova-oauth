@@ -15,14 +15,10 @@ export class OauthBrowser extends Oauth {
         const title = windowParams.title;
         delete windowParams.title;
 
-
         const popup = window.open(url, title, this.serializeOptions(windowParams))
         const watchDelay = (<any>this.constructor).WATCH_POPUP_TIMEOUT;
 
-        console.log("CALLING oAUTH ("+watchDelay+") WITH : ", url); 
-
-        
-       
+        console.debug("CALLING oAUTH ("+watchDelay+") WITH : ", url); 
 
         return new Promise((resolve, reject) => {
           if (typeof popup.focus === 'function') {

@@ -173,6 +173,9 @@ the list of all available options can be found:
 - Adds 60 second hard limit
 - Reduces check frequency to once a second.
 
+**0.0.6**
+- Fixes a few mistakes in Readme
+
 ## Contribution Rules
 
 Send me a PR from your fork. 
