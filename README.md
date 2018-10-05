@@ -173,8 +173,9 @@ the list of all available options can be found:
 - Adds 60 second hard limit
 - Reduces check frequency to once a second.
 
-**0.0.6**
+**0.0.5 - 0.0.9**
 - Fixes a few mistakes in Readme
+- Logs as console.debug and not console.log on init
 
 ## Contribution Rules
 
