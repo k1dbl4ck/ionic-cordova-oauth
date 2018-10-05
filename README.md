@@ -1,6 +1,6 @@
-# Ionic Cordova Oauth
+# Ionic Cordova oAuth
 
-ionic-cordova-oauth is an Oauth library which easily integrates in Angular2/Ionic2 or any other WEB or Cordova applications. The library is extensible by adding extending a provider with the specifics of your implementation. 
+ionic-cordova-oauth is an oAuth 2.0 library which easily integrates in Angular2/Ionic2 or any other Web or Cordova applications. The library is extensible by adding a provider with the specifics of your implementation that extends the core provider.  
 
 
 ## Requirements
@@ -14,7 +14,7 @@ For Web application:
 * webpack, systemjs or amd loaders
 
 
-## Installing ioni-cordova-oauth Into Your Project
+## Installing ionic-cordova-oauth Into Your Project
 
 ### Installing
 
@@ -90,9 +90,9 @@ const provider = new Facebook({
 })
 
 oauth.logInVia(provider).then((success) => {
-    console.log(JSON.stringify(success));
+    console.log(success);
 }, (error) => {
-    console.log(JSON.stringify(error));
+    console.log(error);
 });
 ```
 
@@ -131,7 +131,7 @@ export class HomePage {
     public facebook() {
         this.platform.ready().then(() => {
             this.oauth.logInVia(this.facebookProvider).then(success => {
-                console.log("RESULT: " + JSON.stringify(success));
+                console.log("SUCCESS: ", success);
             }, error => {
                 console.log("ERROR: ", error);
             });
